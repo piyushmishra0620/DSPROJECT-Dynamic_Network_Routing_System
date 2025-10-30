@@ -7,15 +7,24 @@ class BST;
 
 class Node{
     private:
-        int a,b,c,d;
-        class Node* nextptr;
+        int ip;
+        Node* rightptr;
+        Node* leftptr;
     public:
-        Node(string& ip);    
+        Node(long long int ip);    
     friend class BST;
 };
 
 class BST{
-    
+    private:
+        Node* head;
+    public:
+        BST();
+        void createNode();
+        void insertNode();
+        void inorderTraversal();
+        void search();
+        void deleteNode();    
 };
 
 #endif
